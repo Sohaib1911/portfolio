@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sohaib Mohsin | Software Engineer — Cross & Native Platform</title>
+  <meta name="description" content="Portfolio of Sohaib Mohsin — Software Engineer specializing in Flutter, Dart, Native Android, Firebase, and AI-integrated mobile solutions.">
+  <meta name="keywords" content="Sohaib Mohsin, Flutter Developer, Mobile Engineer, Android Developer, Dart, Firebase, MVVM, Cross-Platform Developer">
+  <meta name="author" content="Sohaib Mohsin">
+
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sohaib Mohsin | Software Engineer — Cross & Native Platform">
+  <meta property="og:description" content="Crafting high-performance mobile applications with Flutter, Dart & Native Android. Explore projects, architecture, and technical capabilities.">
+  <meta property="og:image" content="assets/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'/><polyline points='2 17 12 22 22 17'/><polyline points='2 12 12 17 22 12'/></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              amber: '#f59e0b',
+              orange: '#ea580c',
+              cyan: '#38bdf8',
+              blue: '#0284c7',
+              dark: '#070a0f',
+              card: '#0d131f',
+              cardHover: '#131c2e'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#070a0f] text-slate-100 font-sans antialiased relative min-h-screen">
+
+  <!-- Ambient Glow Cursor Follower (Desktop) -->
+  <div id="cursor-glow"></div>
+
+  <!-- Background Mesh Pattern -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none opacity-40 z-0"></div>
+
+  <!-- Ambient Background Gradients -->
+  <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-amber-500/10 blur-[140px] pointer-events-none"></div>
+  <div class="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-sky-500/10 blur-[160px] pointer-events-none"></div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Monogram -->
+      <a href="#hero" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-600 p-[1px] shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-all duration-300">
+          <div class="w-full h-full bg-[#090d16] rounded-xl flex items-center justify-center">
+            <span class="font-mono font-extrabold text-sm text-amber-400 group-hover:scale-110 transition-transform duration-200">SM</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-bold tracking-tight text-white group-hover:text-amber-300 transition-colors">Sohaib Mohsin</span>
+          <span class="hidden sm:inline-block text-xs font-mono text-slate-400 ml-1.5 px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700/40">SWE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 font-mono text-xs">
+        <a href="#about" class="nav-link px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 hover:bg-slate-800/40 transition-all">01. About</a>
+        <a href="#skills" class="nav-link px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 hover:bg-slate-800/40 transition-all">02. Skills</a>
+        <a href="#experience" class="nav-link px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 hover:bg-slate-800/40 transition-all">03. Experience</a>
+        <a href="#projects" class="nav-link px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 hover:bg-slate-800/40 transition-all">04. Projects</a>
+        <a href="#terminal" class="nav-link px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 hover:bg-slate-800/40 transition-all">05. Terminal</a>
+        <a href="#contact" class="nav-link px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 hover:bg-slate-800/40 transition-all">06. Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden lg:flex items-center space-x-4">
+        <div class="flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+          <span>Open to Roles</span>
+        </div>
+        <a href="assets/resume.pdf" download="Sohaib_Mohsin_Resume.pdf" class="btn-premium flex items-center space-x-2 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-semibold text-xs shadow-lg shadow-amber-500/25 transition-all">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Resume</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-amber-400 focus:outline-none">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 bg-[#0a0f1a]/95 border-b border-slate-800/80 px-6 py-0 flex flex-col space-y-3 font-mono text-sm">
+      <a href="#about" class="mobile-nav-link text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800/50">01. About</a>
+      <a href="#skills" class="mobile-nav-link text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800/50">02. Skills</a>
+      <a href="#experience" class="mobile-nav-link text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800/50">03. Experience</a>
+      <a href="#projects" class="mobile-nav-link text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800/50">04. Projects</a>
+      <a href="#terminal" class="mobile-nav-link text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800/50">05. Dev Terminal</a>
+      <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800/50">06. Contact</a>
+      <div class="pt-2 pb-4 flex flex-col gap-3">
+        <a href="assets/resume.pdf" download="Sohaib_Mohsin_Resume.pdf" class="w-full flex items-center justify-center space-x-2 py-2.5 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Download CV (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 pt-24">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="hero" class="min-h-[calc(100vh-6rem)] flex items-center py-12 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
+        
+        <!-- Left Content (Column 7/12) -->
+        <div class="lg:col-span-7 flex flex-col space-y-6 text-left">
+          
+          <!-- Availability Tag -->
+          <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 w-fit">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400 pulse-dot"></span>
+            <span class="text-xs font-mono font-medium text-amber-300">Software Engineer &middot; Cross & Native Mobile</span>
+          </div>
+
+          <!-- Headline -->
+          <div class="space-y-3">
+            <h2 class="text-slate-400 text-sm sm:text-base font-mono flex items-center space-x-2">
+              <span class="text-sky-400 font-bold">&gt;</span>
+              <span>Hi, I'm</span>
+            </h2>
+            <h1 class="hero-name text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-none break-words">
+              Sohaib Mohsin
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-300 font-medium pt-1">
+              Engineering scalable mobile systems with <span class="text-sky-400 font-semibold">Flutter</span>, <span class="text-amber-400 font-semibold">Dart</span> & <span class="text-purple-400 font-semibold">Kotlin (Native Android)</span>.
+            </p>
+          </div>
+
+          <!-- Professional Engineering Summary -->
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Software Engineer specializing in high-performance native Android (<span class="text-purple-300 font-semibold">Kotlin</span>) and cross-platform (<span class="text-sky-300 font-semibold">Flutter &amp; Dart</span>) mobile development. Dedicated to building clean, resilient architectures, fluid user interfaces, and intelligent automations that deliver real-world impact.
+          </p>
+
+          <!-- Primary CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#projects" class="btn-premium inline-flex items-center space-x-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-xl shadow-amber-500/25 transition-all group">
+              <span>View Projects</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <a href="assets/resume.pdf" download="Sohaib_Mohsin_Resume.pdf" class="inline-flex items-center space-x-2.5 px-6 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-medium text-sm border border-slate-700/80 hover:border-amber-500/40 shadow-lg transition-all">
+              <i data-lucide="file-text" class="w-4 h-4 text-amber-400"></i>
+              <span>Download CV</span>
+            </a>
+
+            <a href="#contact" class="inline-flex items-center space-x-2 px-5 py-3.5 rounded-xl text-slate-400 hover:text-amber-400 text-sm font-medium transition-colors">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <!-- Social Quick Links -->
+          <div class="flex items-center space-x-4 pt-6 border-t border-slate-800/80">
+            <span class="text-xs font-mono text-slate-500 uppercase tracking-wider">Connect:</span>
+            
+            <a href="https://github.com/Sohaib1911" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-amber-500/50 hover:bg-slate-800/80 transition-all" title="GitHub Profile">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/sohaib-mohsin-856454253/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-sky-400 hover:border-sky-500/50 hover:bg-slate-800/80 transition-all" title="LinkedIn Profile">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+
+            <a href="mailto:sohaibmohsin1911@gmail.com" class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-amber-400 hover:border-amber-500/50 hover:bg-slate-800/80 transition-all" title="Send Email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+
+            <a href="https://wa.me/923036888715" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-emerald-400 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all" title="WhatsApp Connect">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Content: Profile Photo with Aura & Orbital Badges (Column 5/12) -->
+        <div class="lg:col-span-5 flex justify-center items-center relative">
+          
+          <div class="relative flex items-center justify-center">
+            
+            <!-- Circular Avatar Portal -->
+            <div class="avatar-portal p-1.5 rounded-full">
+              <div class="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-[#0a0f1d] z-10 shadow-2xl">
+                <img 
+                  src="assets/profile.jpg" 
+                  alt="Sohaib Mohsin - Software Engineer" 
+                  class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                  loading="eager"
+                />
+              </div>
+            </div>
+
+            <!-- Floating Orbital Badge 1: Flutter & Dart -->
+            <div class="floating-chip absolute -top-2 -left-2 sm:top-2 sm:-left-8 z-20 glass-card px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl flex items-center space-x-2 sm:space-x-2.5 shadow-xl border border-sky-500/30">
+              <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400">
+                <i data-lucide="smartphone" class="w-3 sm:w-3.5 h-3 sm:h-3.5"></i>
+              </div>
+              <div>
+                <div class="text-[10px] sm:text-[11px] font-mono text-slate-400">Framework</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-200">Flutter &middot; Dart</div>
+              </div>
+            </div>
+
+            <!-- Floating Orbital Badge 2: Agentive AI -->
+            <div class="floating-chip absolute -bottom-2 -right-2 sm:bottom-4 sm:-right-8 z-20 glass-card px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl flex items-center space-x-2 sm:space-x-2.5 shadow-xl border border-amber-500/30">
+              <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400">
+                <i data-lucide="bot" class="w-3 sm:w-3.5 h-3 sm:h-3.5"></i>
+              </div>
+              <div>
+                <div class="text-[10px] sm:text-[11px] font-mono text-slate-400">Emerging Tech</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-200">AI Automation</div>
+              </div>
+            </div>
+
+            <!-- Floating Orbital Badge 3: Kotlin & Native Android -->
+            <div class="floating-chip absolute bottom-8 -left-3 sm:bottom-20 sm:-left-12 z-20 glass-card px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl flex items-center space-x-2 sm:space-x-2.5 shadow-lg border border-purple-500/30">
+              <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">
+                <i data-lucide="code" class="w-3 sm:w-3.5 h-3 sm:h-3.5"></i>
+              </div>
+              <div>
+                <div class="text-[10px] sm:text-[11px] font-mono text-slate-400">Native</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-200">Kotlin &middot; Android</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= HIGHLIGHT METRICS STRIP ================= -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="glass-card p-5 rounded-2xl flex items-start space-x-4 border border-slate-800/80">
+          <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-200 text-sm">Cross & Native Platform</h3>
+            <p class="text-xs text-slate-400 mt-1">Unified Flutter mobile experiences paired with native Android Java & Kotlin depth.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl flex items-start space-x-4 border border-slate-800/80">
+          <div class="p-3 rounded-xl bg-sky-500/10 text-sky-400 border border-sky-500/20">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-200 text-sm">Agentic AI Integration</h3>
+            <p class="text-xs text-slate-400 mt-1">Prompt-engineered workflows with Groq Llama 3.3-70B and OpenAI for real mobile autonomy.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl flex items-start space-x-4 border border-slate-800/80">
+          <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-200 text-sm">MVVM Architecture</h3>
+            <p class="text-xs text-slate-400 mt-1">Decoupled View-ViewModel-Repository patterns ensuring testability and zero state leaks.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl flex items-start space-x-4 border border-slate-800/80">
+          <div class="p-3 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+            <i data-lucide="database" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-200 text-sm">Offline-First & Cloud</h3>
+            <p class="text-xs text-slate-400 mt-1">Reliable local SQLite persistence synchronized with real-time Firebase Cloud Firestore streams.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ME SECTION ================= -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      
+      <div class="flex items-center space-x-3 mb-10">
+        <span class="font-mono text-amber-400 text-sm">01.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">About Me & Background</h2>
+        <div class="h-[1px] bg-slate-800 flex-grow max-w-xs ml-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Story Text (Column 7/12) -->
+        <div class="lg:col-span-7 space-y-5 text-slate-300 text-base leading-relaxed">
+          <p>
+            I am a <strong class="text-white font-semibold">Computer Science graduate (BS CS, 2022–2026)</strong> and a mobile software engineer specializing in <strong class="text-sky-300 font-semibold">Kotlin, Native Android, Flutter, and Dart</strong>. My journey began with strong foundations in programming, object-oriented design, and native Android development, later expanding into Flutter’s cross-platform ecosystem.
+          </p>
+
+          <p>
+            I currently work as a <strong class="text-white font-semibold">Software Engineer at IT Globe Software Company in Lahore</strong>, where I build, ship, and maintain real-world mobile applications. After completing my software engineering internship with the same company, I transitioned into a full-time engineering role, gaining hands-on experience with production-level development and modern mobile technologies.
+          </p>
+
+          <p>
+            My approach goes beyond simply building interfaces—I focus on <strong class="text-white font-semibold">scalable application architecture, clean separation of concerns, reactive state management, reliable local data persistence, and AI-powered integrations</strong>. I am particularly interested in building intelligent, high-quality mobile experiences that combine strong engineering principles with emerging AI capabilities.
+          </p>
+
+          <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+              <div class="text-xs font-mono text-emerald-400">Current Position</div>
+              <div class="text-sm font-bold text-white mt-1">Software Engineer</div>
+              <div class="text-xs text-slate-400 mt-0.5">IT Globe Software Company &middot; Lahore</div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+              <div class="text-xs font-mono text-purple-400">Primary Focus</div>
+              <div class="text-sm font-bold text-white mt-1">Kotlin, Native Android &amp; Flutter</div>
+              <div class="text-xs text-slate-400 mt-0.5">Full-Time &middot; Native &amp; Cross-Platform</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Principles & Specs (Column 5/12) -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <div class="glass-card p-6 rounded-2xl border border-slate-800">
+            <h3 class="font-mono text-xs text-slate-400 uppercase tracking-wider mb-4 flex items-center space-x-2">
+              <i data-lucide="code" class="w-4 h-4 text-amber-400"></i>
+              <span>Engineering Standards</span>
+            </h3>
+
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <div class="w-6 h-6 rounded bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-mono">1</div>
+                <div>
+                  <h4 class="text-sm font-semibold text-white">Clean Separation of Concerns</h4>
+                  <p class="text-xs text-slate-400 mt-0.5">Strict decoupling of UI Widgets from Business ViewModels and Data Repositories.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <div class="w-6 h-6 rounded bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-mono">2</div>
+                <div>
+                  <h4 class="text-sm font-semibold text-white">60fps Smooth User Experience</h4>
+                  <p class="text-xs text-slate-400 mt-0.5">Minimizing unnecessary widget rebuilds with granular Provider listeners and background thread offloading.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <div class="w-6 h-6 rounded bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-mono">3</div>
+                <div>
+                  <h4 class="text-sm font-semibold text-white">Offline-First Resilience</h4>
+                  <p class="text-xs text-slate-400 mt-0.5">Applications remain functional without an active network, synchronizing seamlessly once reconnected.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Contact Callout -->
+          <div class="p-5 rounded-2xl bg-gradient-to-br from-amber-500/10 via-slate-900 to-slate-900 border border-amber-500/20 flex items-center justify-between">
+            <div>
+              <div class="text-xs font-mono text-amber-400">Have a project or position in mind?</div>
+              <div class="text-sm font-bold text-white mt-0.5">Let's discuss how I can contribute.</div>
+            </div>
+            <a href="#contact" class="px-3.5 py-2 rounded-lg bg-amber-500 text-slate-950 text-xs font-bold hover:bg-amber-400 transition-colors shrink-0">
+              Reach Out
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= TECHNICAL SKILLS SECTION ================= -->
+    <section id="skills" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="font-mono text-amber-400 text-sm">02.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Technical Capabilities</h2>
+        <div class="h-[1px] bg-slate-800 flex-grow max-w-xs ml-4"></div>
+      </div>
+      <p class="text-slate-400 text-sm max-w-2xl mb-10">
+        Confirmed skills categorized by practical application and daily engineering strength.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Group 1: Core & Strong -->
+        <div class="glass-card p-6 rounded-2xl border border-amber-500/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 px-3 py-1 bg-amber-500/10 text-amber-400 text-[11px] font-mono rounded-bl-xl border-b border-l border-amber-500/20">
+            Strong // Daily Driver
+          </div>
+
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Core Mobile Stack</h3>
+              <p class="text-xs text-slate-400 font-mono">Primary Engineering Focus</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-amber-300 border border-amber-500/30 text-xs font-mono font-medium">Flutter</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-amber-300 border border-amber-500/30 text-xs font-mono font-medium">Dart</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Firebase Auth</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Cloud Firestore</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Firebase FCM</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">REST APIs</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-amber-300 border border-amber-500/30 text-xs font-mono font-medium">Provider</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">MVVM Pattern</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Responsive UI/UX</span>
+          </div>
+
+          <p class="text-xs text-slate-400 mt-6 pt-4 border-t border-slate-800/80 leading-relaxed">
+            Deep hands-on expertise building production UIs, managing reactive states, handling push notifications, and connecting secure cloud backends.
+          </p>
+        </div>
+
+        <!-- Group 2: Comfortable -->
+        <div class="glass-card p-6 rounded-2xl border border-sky-500/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 px-3 py-1 bg-sky-500/10 text-sky-400 text-[11px] font-mono rounded-bl-xl border-b border-l border-sky-500/20">
+            Comfortable // Tested
+          </div>
+
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="p-2.5 rounded-xl bg-sky-500/10 text-sky-400">
+              <i data-lucide="code-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Native Android</h3>
+              <p class="text-xs text-slate-400 font-mono">Modern Android Stack</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-purple-300 border border-purple-500/30 text-xs font-mono font-medium">Kotlin</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-sky-300 border border-sky-500/30 text-xs font-mono font-medium">Jetpack Compose</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-sky-300 border border-sky-500/30 text-xs font-mono font-medium">XML Layouts</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Android Studio</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Activity Lifecycle</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Offline-First DB</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Git &amp; GitHub</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">OOP Principles</span>
+          </div>
+
+          <p class="text-xs text-slate-400 mt-6 pt-4 border-t border-slate-800/80 leading-relaxed">
+            Native Android engineering with Kotlin, modern declarative UI using Jetpack Compose, responsive XML layout design, and robust lifecycle management.
+          </p>
+        </div>
+
+        <!-- Group 3: Currently Exploring / Familiar -->
+        <div class="glass-card p-6 rounded-2xl border border-purple-500/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 px-3 py-1 bg-purple-500/10 text-purple-400 text-[11px] font-mono rounded-bl-xl border-b border-l border-purple-500/20">
+            Active Learning // AI
+          </div>
+
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="p-2.5 rounded-xl bg-purple-500/10 text-purple-400">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Emerging &amp; AI</h3>
+              <p class="text-xs text-slate-400 font-mono">Forward-Looking Focus</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-purple-300 border border-purple-500/30 text-xs font-mono font-medium">AI Agent Workflows</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-purple-300 border border-purple-500/30 text-xs font-mono font-medium">Prompt Engineering</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Conversational AI</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Automated Workflows</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">DSA</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 text-xs font-mono">Autonomous Agents</span>
+          </div>
+
+          <p class="text-xs text-slate-400 mt-6 pt-4 border-t border-slate-800/80 leading-relaxed">
+            Integrating intelligent agent workflows into modern mobile applications alongside advanced data structures and algorithms.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= WORK EXPERIENCE SECTION ================= -->
+    <section id="experience" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="font-mono text-amber-400 text-sm">03.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Work Experience</h2>
+        <div class="h-[1px] bg-slate-800 flex-grow max-w-xs ml-4"></div>
+      </div>
+      <p class="text-slate-400 text-sm max-w-2xl mb-10">
+        Hands-on industry experience building scalable Flutter applications and collaborating within engineering teams.
+      </p>
+
+      <!-- Experience Card 1: IT Globe Software Company (Current Role) -->
+      <div class="glass-card p-6 sm:p-8 rounded-3xl border border-amber-500/30 relative mb-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+          <div>
+            <div class="flex items-center space-x-3">
+              <span class="text-lg sm:text-xl font-bold text-white">Software Engineer &middot; Mobile Applications</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono border border-emerald-500/20">Current Role</span>
+            </div>
+            <div class="text-amber-300 font-medium text-sm mt-1 flex items-center space-x-2">
+              <i data-lucide="building-2" class="w-4 h-4"></i>
+              <span>IT Globe Software Company</span>
+              <span class="text-slate-500">&bull;</span>
+              <span class="text-slate-400">Lahore, Pakistan</span>
+            </div>
+          </div>
+
+          <div class="font-mono text-xs text-emerald-400 bg-emerald-500/10 px-4 py-2 rounded-xl border border-emerald-500/20 w-fit">
+            Present &middot; Full-Time
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-6 items-start">
+          <div class="lg:col-span-8 space-y-3.5">
+            <div class="flex items-start space-x-3 text-slate-300 text-sm leading-relaxed">
+              <span class="text-amber-400 font-bold mt-0.5">▸</span>
+              <span>Successfully completed software engineering internship at <strong class="text-white">IT Globe Software Company</strong> in Lahore and transitioned into a full software engineer position.</span>
+            </div>
+
+            <div class="flex items-start space-x-3 text-slate-300 text-sm leading-relaxed">
+              <span class="text-amber-400 font-bold mt-0.5">▸</span>
+              <span>Developing and maintaining native Android applications utilizing <strong class="text-white">Kotlin</strong>, leveraging modern Android architecture components, clean concurrency, and lifecycle-aware UI.</span>
+            </div>
+
+            <div class="flex items-start space-x-3 text-slate-300 text-sm leading-relaxed">
+              <span class="text-amber-400 font-bold mt-0.5">▸</span>
+              <span>Working across native and cross-platform mobile solutions, ensuring high responsiveness, clean code structure, and rapid feature iteration.</span>
+            </div>
+
+            <div class="flex items-start space-x-3 text-slate-300 text-sm leading-relaxed">
+              <span class="text-amber-400 font-bold mt-0.5">▸</span>
+              <span>Collaborating with engineering teams in sprint planning, code reviews, and delivering production-ready releases.</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 bg-slate-900/60 p-4 rounded-2xl border border-slate-800/80">
+            <h4 class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-3">Core Tech &amp; Stack:</h4>
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-purple-300 border border-purple-500/30">Kotlin</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300 border border-emerald-500/30">Native Android</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-amber-300 border border-amber-500/30">Flutter</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Clean Architecture</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Git / GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Card 2: Jeux Developers (Previous Internship) -->
+      <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800 relative">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+          <div>
+            <div class="flex items-center space-x-3">
+              <span class="text-lg sm:text-xl font-bold text-white">Software Developer Intern (Flutter)</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-mono border border-amber-500/20">Internship</span>
+            </div>
+            <div class="text-amber-300 font-medium text-sm mt-1 flex items-center space-x-2">
+              <i data-lucide="building-2" class="w-4 h-4"></i>
+              <span>Jeux Developers</span>
+              <span class="text-slate-500">&bull;</span>
+              <span class="text-slate-400">Sahiwal, Pakistan</span>
+            </div>
+          </div>
+
+          <div class="font-mono text-xs text-slate-400 bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800 w-fit">
+            01/08/2025 – 01/10/2025
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-6 items-start">
+          <div class="lg:col-span-8 space-y-3.5">
+            <div class="flex items-start space-x-3 text-slate-300 text-sm leading-relaxed">
+              <span class="text-amber-400 font-bold mt-0.5">▸</span>
+              <span>Learned and applied the <strong class="text-white">Flutter (Dart)</strong> framework from scratch, architecting hands-on UI components and multi-screen workflows during the internship period.</span>
+            </div>
+
+            <div class="flex items-start space-x-3 text-slate-300 text-sm leading-relaxed">
+              <span class="text-amber-400 font-bold mt-0.5">▸</span>
+              <span>Implemented state management using <strong class="text-white">Provider</strong>, deeply analyzing the nuances between stateful and stateless widgets to eliminate unnecessary UI re-rendering.</span>
+            </div>
+
+            <div class="flex items-start space-x-3 text-slate-300 text-sm leading-relaxed">
+              <span class="text-amber-400 font-bold mt-0.5">▸</span>
+              <span>Participated in weekly technical assessments to evaluate Flutter concepts, demonstrating consistent rapid progress and self-driven problem solving.</span>
+            </div>
+
+            <div class="flex items-start space-x-3 text-slate-300 text-sm leading-relaxed">
+              <span class="text-amber-400 font-bold mt-0.5">▸</span>
+              <span>Independently practiced and reinforced concepts outside internship hours, resulting in successfully building personal projects including AI-integrated mobile apps using Firebase and LLM APIs.</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 bg-slate-900/60 p-4 rounded-2xl border border-slate-800/80">
+            <h4 class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-3">Technologies Leveraged:</h4>
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-amber-300">Flutter</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-amber-300">Dart</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Provider</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">State Lifecycle</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Git</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">REST APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PROJECTS SHOWCASE ================= -->
+    <section id="projects" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <div>
+          <div class="flex items-center space-x-3">
+            <span class="font-mono text-amber-400 text-sm">04.</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Featured Projects</h2>
+            <div class="h-[1px] bg-slate-800 w-16 ml-4 hidden sm:block"></div>
+          </div>
+          <p class="text-slate-400 text-sm mt-1">Real-world applications showcasing architecture, AI integrations, and mobile engineering.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2 font-mono text-xs">
+          <button class="filter-btn px-3 py-1.5 rounded-lg border bg-amber-500/20 text-amber-400 border-amber-500/40 transition-all" data-filter="all">All</button>
+          <button class="filter-btn px-3 py-1.5 rounded-lg border bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white transition-all" data-filter="flutter">Flutter</button>
+          <button class="filter-btn px-3 py-1.5 rounded-lg border bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white transition-all" data-filter="android">Native Android</button>
+          <button class="filter-btn px-3 py-1.5 rounded-lg border bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white transition-all" data-filter="ai">AI / LLM</button>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- PROJECT 1: Agentive AI Project Manager (Flagship) -->
+        <div class="project-card glass-card rounded-3xl overflow-hidden border border-amber-500/30 flex flex-col justify-between group transition-all duration-300" data-categories="flutter ai">
+          <div>
+            <!-- Visual Header / Mockup Banner -->
+            <div class="h-56 bg-gradient-to-br from-amber-950/40 via-slate-900 to-[#0a0f1d] p-6 flex flex-col justify-between border-b border-slate-800/80 relative overflow-hidden">
+              <div class="absolute -right-6 -bottom-6 w-44 h-44 rounded-full bg-amber-500/10 blur-2xl pointer-events-none"></div>
+              
+              <div class="flex items-center justify-between z-10">
+                <span class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-mono font-medium border border-amber-500/30">Intelligent Automation</span>
+                <span class="text-xs font-mono text-slate-400">Flutter &middot; Cross-Platform</span>
+              </div>
+
+              <!-- High-Tech Mockup Visual -->
+              <div class="bg-slate-950/90 rounded-xl p-4 border border-amber-500/20 shadow-2xl z-10">
+                <div class="flex items-center justify-between text-xs font-mono text-slate-400 pb-2 border-b border-slate-800">
+                  <span class="flex items-center space-x-1.5 text-amber-400">
+                    <i data-lucide="bot" class="w-3.5 h-3.5"></i>
+                    <span>AI Agent: Automated Task Allocation</span>
+                  </span>
+                  <span class="text-emerald-400 font-bold">Active Engine</span>
+                </div>
+                <div class="text-[11px] text-slate-300 pt-2 font-mono truncate">
+                  Role: Manager Dashboard &rarr; Automated task delegation by workload analysis
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white group-hover:text-amber-300 transition-colors">
+                Agentive AI Project Manager
+              </h3>
+              <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+                Cross-platform mobile application featuring role-based access control (Manager, Employee, Client). Powered by integrated AI agents for automated task assignment and client proposal generation.
+              </p>
+
+              <!-- Key Features List -->
+              <div class="mt-4 space-y-1.5 text-xs text-slate-300">
+                <div class="flex items-center space-x-2">
+                  <span class="text-amber-400">✦</span>
+                  <span>Role-based dashboards with secure user authentication</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-amber-400">✦</span>
+                  <span>Real-time statistics dashboard with live cloud synchronization</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-amber-400">✦</span>
+                  <span>Cross-device push notifications with automated token refresh</span>
+                </div>
+              </div>
+
+              <!-- Tech Pills -->
+              <div class="flex flex-wrap gap-1.5 mt-6 font-mono text-[11px]">
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-amber-300 border border-amber-500/30">Flutter</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-amber-300 border border-amber-500/30">Dart</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">AI Automation</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Cloud Sync</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Push Alerts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-slate-800/60 mt-4">
+            <button class="open-project-modal text-xs font-mono text-amber-400 hover:text-amber-300 font-semibold flex items-center space-x-1 py-2" data-project="agentive-ai">
+              <span>View Case Study</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </button>
+            <a href="https://github.com/Sohaib1911" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="Source Code">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: Car Pulse (Architecture Showcase) -->
+        <div class="project-card glass-card rounded-3xl overflow-hidden border border-sky-500/20 flex flex-col justify-between group transition-all duration-300" data-categories="flutter">
+          <div>
+            <!-- Visual Header / Mockup Banner -->
+            <div class="h-56 bg-gradient-to-br from-sky-950/40 via-slate-900 to-[#0a0f1d] p-6 flex flex-col justify-between border-b border-slate-800/80 relative overflow-hidden">
+              <div class="absolute -right-6 -bottom-6 w-44 h-44 rounded-full bg-sky-500/10 blur-2xl pointer-events-none"></div>
+              
+              <div class="flex items-center justify-between z-10">
+                <span class="px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-300 text-xs font-mono font-medium border border-sky-500/30">Offline-First Mobile</span>
+                <span class="text-xs font-mono text-slate-400">Flutter &middot; Analytics</span>
+              </div>
+
+              <!-- High-Tech Mockup Visual -->
+              <div class="bg-slate-950/90 rounded-xl p-4 border border-sky-500/20 shadow-2xl z-10">
+                <div class="flex items-center justify-between text-xs font-mono text-slate-400 pb-2 border-b border-slate-800">
+                  <span class="flex items-center space-x-1.5 text-sky-400">
+                    <i data-lucide="database" class="w-3.5 h-3.5"></i>
+                    <span>Local Data Engine</span>
+                  </span>
+                  <span class="text-emerald-400 font-bold">100% Offline</span>
+                </div>
+                <div class="text-[11px] text-slate-300 pt-2 font-mono truncate">
+                  Architecture: Clean Layered Separation &middot; Reactive Flow
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white group-hover:text-sky-300 transition-colors">
+                Car Pulse
+              </h3>
+              <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+                Automotive maintenance companion built with a clean, decoupled architecture. Ensures complete offline data persistence for vehicle profiles, repair schedules, and trip logs.
+              </p>
+
+              <!-- Key Features List -->
+              <div class="mt-4 space-y-1.5 text-xs text-slate-300">
+                <div class="flex items-center space-x-2">
+                  <span class="text-sky-400">✦</span>
+                  <span>Offline-first data persistence with instant local operations</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-sky-400">✦</span>
+                  <span>Decoupled business logic for vehicles, maintenance, and trips</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-sky-400">✦</span>
+                  <span>Multi-screen UI: Dashboard, Vehicle profiles, Trip Tracker</span>
+                </div>
+              </div>
+
+              <!-- Tech Pills -->
+              <div class="flex flex-wrap gap-1.5 mt-6 font-mono text-[11px]">
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-sky-300 border border-sky-500/30">Flutter</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-sky-300 border border-sky-500/30">Dart</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Clean Architecture</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Offline-First</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Trip Logger</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-slate-800/60 mt-4">
+            <button class="open-project-modal text-xs font-mono text-sky-400 hover:text-sky-300 font-semibold flex items-center space-x-1 py-2" data-project="car-pulse">
+              <span>View Case Study</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </button>
+            <a href="https://github.com/Sohaib1911" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="Source Code">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: Easy Chat Android (Native AI) -->
+        <div class="project-card glass-card rounded-3xl overflow-hidden border border-emerald-500/20 flex flex-col justify-between group transition-all duration-300" data-categories="android ai">
+          <div>
+            <!-- Visual Header / Mockup Banner -->
+            <div class="h-56 bg-gradient-to-br from-emerald-950/40 via-slate-900 to-[#0a0f1d] p-6 flex flex-col justify-between border-b border-slate-800/80 relative overflow-hidden">
+              <div class="absolute -right-6 -bottom-6 w-44 h-44 rounded-full bg-emerald-500/10 blur-2xl pointer-events-none"></div>
+              
+              <div class="flex items-center justify-between z-10">
+                <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-mono font-medium border border-emerald-500/30">Native Android</span>
+                <span class="text-xs font-mono text-slate-400">Java &middot; Conversational AI</span>
+              </div>
+
+              <!-- High-Tech Mockup Visual -->
+              <div class="bg-slate-950/90 rounded-xl p-4 border border-emerald-500/20 shadow-2xl z-10">
+                <div class="flex items-center justify-between text-xs font-mono text-slate-400 pb-2 border-b border-slate-800">
+                  <span class="flex items-center space-x-1.5 text-emerald-400">
+                    <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+                    <span>Conversational AI Assistant</span>
+                  </span>
+                  <span class="text-emerald-400 font-bold">Low-Latency</span>
+                </div>
+                <div class="text-[11px] text-slate-300 pt-2 font-mono truncate">
+                  Architecture: Responsive Messaging UI &middot; Background Worker
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors">
+                Easy Chat
+              </h3>
+              <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+                Native Android conversational application built with Java in Android Studio. Delivers intelligent, interactive dialogue with responsive typing states in a sleek messaging interface.
+              </p>
+
+              <!-- Key Features List -->
+              <div class="mt-4 space-y-1.5 text-xs text-slate-300">
+                <div class="flex items-center space-x-2">
+                  <span class="text-emerald-400">✦</span>
+                  <span>Real-time conversational interface with interactive message bubbles</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-emerald-400">✦</span>
+                  <span>Asynchronous execution ensuring smooth 60fps UI performance</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-emerald-400">✦</span>
+                  <span>Adaptive keyboard handling and dynamic response streaming</span>
+                </div>
+              </div>
+
+              <!-- Tech Pills -->
+              <div class="flex flex-wrap gap-1.5 mt-6 font-mono text-[11px]">
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-emerald-300 border border-emerald-500/30">Native Android</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-emerald-300 border border-emerald-500/30">Java</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Conversational AI</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Dynamic UI</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Background Worker</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-slate-800/60 mt-4">
+            <button class="open-project-modal text-xs font-mono text-emerald-400 hover:text-emerald-300 font-semibold flex items-center space-x-1 py-2" data-project="easy-chat">
+              <span>View Case Study</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </button>
+            <a href="https://github.com/Sohaib1911" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="Source Code">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: Notes App (Native & Cloud Sync) -->
+        <div class="project-card glass-card rounded-3xl overflow-hidden border border-purple-500/20 flex flex-col justify-between group transition-all duration-300" data-categories="android">
+          <div>
+            <!-- Visual Header / Mockup Banner -->
+            <div class="h-56 bg-gradient-to-br from-purple-950/40 via-slate-900 to-[#0a0f1d] p-6 flex flex-col justify-between border-b border-slate-800/80 relative overflow-hidden">
+              <div class="absolute -right-6 -bottom-6 w-44 h-44 rounded-full bg-purple-500/10 blur-2xl pointer-events-none"></div>
+              
+              <div class="flex items-center justify-between z-10">
+                <span class="px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-mono font-medium border border-purple-500/30">Native Android</span>
+                <span class="text-xs font-mono text-slate-400">Cloud Productivity</span>
+              </div>
+
+              <!-- High-Tech Mockup Visual -->
+              <div class="bg-slate-950/90 rounded-xl p-4 border border-purple-500/20 shadow-2xl z-10">
+                <div class="flex items-center justify-between text-xs font-mono text-slate-400 pb-2 border-b border-slate-800">
+                  <span class="flex items-center space-x-1.5 text-purple-400">
+                    <i data-lucide="cloud" class="w-3.5 h-3.5"></i>
+                    <span>Real-time Sync Engine</span>
+                  </span>
+                  <span class="text-emerald-400 font-bold">Authenticated</span>
+                </div>
+                <div class="text-[11px] text-slate-300 pt-2 font-mono truncate">
+                  Architecture: Secure Auth &rarr; Real-Time Workspace &rarr; Detail Editor
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                Cloud Notes App
+              </h3>
+              <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+                Native Android productivity application with full CRUD capabilities. Features secure email verification authentication and instantaneous cross-device cloud synchronization.
+              </p>
+
+              <!-- Key Features List -->
+              <div class="mt-4 space-y-1.5 text-xs text-slate-300">
+                <div class="flex items-center space-x-2">
+                  <span class="text-purple-400">✦</span>
+                  <span>Email verification security flow for protected account access</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-purple-400">✦</span>
+                  <span>Instant multi-device cloud data replication and conflict resolution</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-purple-400">✦</span>
+                  <span>Clean multi-screen navigation and robust lifecycle management</span>
+                </div>
+              </div>
+
+              <!-- Tech Pills -->
+              <div class="flex flex-wrap gap-1.5 mt-6 font-mono text-[11px]">
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-purple-300 border border-purple-500/30">Native Android</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-purple-300 border border-purple-500/30">Java</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Secure Auth</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">Cloud Sync</span>
+                <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800">CRUD Engine</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-slate-800/60 mt-4">
+            <button class="open-project-modal text-xs font-mono text-purple-400 hover:text-purple-300 font-semibold flex items-center space-x-1 py-2" data-project="notes-app">
+              <span>View Case Study</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </button>
+            <a href="https://github.com/Sohaib1911" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="Source Code">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= INTERACTIVE DEVELOPER TERMINAL ================= -->
+    <section id="terminal" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="font-mono text-amber-400 text-sm">05.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Interactive Developer Terminal</h2>
+        <div class="h-[1px] bg-slate-800 flex-grow max-w-xs ml-4"></div>
+      </div>
+      <p class="text-slate-400 text-sm max-w-2xl mb-8">
+        Query my software background, architecture specs, or environment status in real time. Click quick command buttons or type in the console below.
+      </p>
+
+      <div class="terminal-window overflow-hidden">
+        <!-- Terminal Header Bar -->
+        <div class="terminal-header px-4 py-3 flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+            <span class="text-xs font-mono text-slate-400 ml-3 hidden sm:inline">sohaib@devbox: ~ (zsh)</span>
+          </div>
+          <div class="text-[11px] font-mono text-slate-500">v2.4.0-stable</div>
+        </div>
+
+        <!-- Terminal Quick Action Bar -->
+        <div class="bg-slate-950/60 px-4 py-2.5 border-b border-slate-800/80 flex flex-wrap items-center gap-2">
+          <span class="text-[11px] font-mono text-slate-400 mr-2">Quick queries:</span>
+          <button class="quick-cmd-btn text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-800 hover:border-amber-500/40 transition-colors" data-cmd="sohaib.skills">sohaib.skills</button>
+          <button class="quick-cmd-btn text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-sky-400 border border-slate-800 hover:border-sky-500/40 transition-colors" data-cmd="sohaib.projects">sohaib.projects</button>
+          <button class="quick-cmd-btn text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-emerald-400 border border-slate-800 hover:border-emerald-500/40 transition-colors" data-cmd="flutter doctor">flutter doctor</button>
+          <button class="quick-cmd-btn text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-purple-400 border border-slate-800 hover:border-purple-500/40 transition-colors" data-cmd="sohaib.experience">sohaib.experience</button>
+          <button class="quick-cmd-btn text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 transition-colors" data-cmd="clear">clear</button>
+        </div>
+
+        <!-- Terminal Output Area -->
+        <div id="terminal-output" class="p-5 font-mono text-xs sm:text-sm min-h-[220px] max-h-[360px] overflow-y-auto leading-relaxed space-y-2">
+          <div class="text-slate-400">
+            Welcome to Sohaib Mohsin's interactive developer console.<br>
+            Type <span class="text-amber-400 font-semibold">help</span> to view available system commands or select from the quick queries above.
+          </div>
+        </div>
+
+        <!-- Terminal Input Line -->
+        <div class="px-4 py-3 bg-slate-950 border-t border-slate-800/80 flex items-center space-x-2">
+          <span class="text-amber-400 font-mono text-xs sm:text-sm shrink-0">sohaib@mobile-engineer:~$</span>
+          <input 
+            type="text" 
+            id="terminal-input" 
+            placeholder="Type 'sohaib.skills' or 'help' and press Enter..."
+            class="bg-transparent border-none outline-none text-white font-mono text-xs sm:text-sm w-full placeholder-slate-600 focus:ring-0"
+            autocomplete="off"
+            spellcheck="false"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="font-mono text-amber-400 text-sm">06.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Get In Touch</h2>
+        <div class="h-[1px] bg-slate-800 flex-grow max-w-xs ml-4"></div>
+      </div>
+      <p class="text-slate-400 text-sm max-w-2xl mb-12">
+        Whether you have an open mobile engineering role, a software project to build, or want to connect — my inbox is always open.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Direct Contact Cards (Column 5/12) -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <!-- Email Card with Copy Button -->
+          <div class="glass-card p-6 rounded-2xl border border-slate-800 flex items-start justify-between">
+            <div class="flex items-start space-x-4">
+              <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400">Direct Email</span>
+                <a href="mailto:sohaibmohsin1911@gmail.com" class="block font-medium text-white hover:text-amber-300 text-sm mt-0.5 break-all">
+                  sohaibmohsin1911@gmail.com
+                </a>
+              </div>
+            </div>
+            <button class="copy-email-btn p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-amber-400 border border-slate-800 transition-colors" title="Copy Email">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- LinkedIn Card -->
+          <a href="https://www.linkedin.com/in/sohaib-mohsin-856454253/" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl border border-slate-800 flex items-center justify-between hover:border-sky-500/40 group transition-all">
+            <div class="flex items-center space-x-4">
+              <div class="p-3 rounded-xl bg-sky-500/10 text-sky-400 border border-sky-500/20">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400">LinkedIn Profile</span>
+                <span class="block font-medium text-white group-hover:text-sky-300 text-sm mt-0.5">
+                  /in/sohaib-mohsin
+                </span>
+              </div>
+            </div>
+            <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 group-hover:translate-x-0.5 transition-all"></i>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/Sohaib1911" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl border border-slate-800 flex items-center justify-between hover:border-amber-500/40 group transition-all">
+            <div class="flex items-center space-x-4">
+              <div class="p-3 rounded-xl bg-slate-800 text-slate-200 border border-slate-700">
+                <i data-lucide="github" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400">GitHub Repositories</span>
+                <span class="block font-medium text-white group-hover:text-amber-300 text-sm mt-0.5">
+                  @Sohaib1911
+                </span>
+              </div>
+            </div>
+            <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-amber-400 group-hover:translate-x-0.5 transition-all"></i>
+          </a>
+
+          <!-- WhatsApp Direct Card -->
+          <a href="https://wa.me/923036888715" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl border border-slate-800 flex items-center justify-between hover:border-emerald-500/40 group transition-all">
+            <div class="flex items-center space-x-4">
+              <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400">Instant Chat</span>
+                <span class="block font-medium text-white group-hover:text-emerald-300 text-sm mt-0.5">
+                  WhatsApp Direct
+                </span>
+              </div>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all"></i>
+          </a>
+
+        </div>
+
+        <!-- Interactive Direct Message Form (Column 7/12) -->
+        <div class="lg:col-span-7">
+          <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800">
+            <h3 class="text-lg font-bold text-white mb-2">Send a Message</h3>
+            <p class="text-xs text-slate-400 mb-6">Fill out the form below to reach me directly.</p>
+
+            <form id="portfolio-contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-name" class="block text-xs font-mono text-slate-400 mb-1.5">Your Name *</label>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    required 
+                    placeholder="Enter your name" 
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/50 transition-all"
+                  >
+                </div>
+
+                <div>
+                  <label for="contact-email" class="block text-xs font-mono text-slate-400 mb-1.5">Your Email *</label>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    required 
+                    placeholder="Enter your email address" 
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/50 transition-all"
+                  >
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-subject" class="block text-xs font-mono text-slate-400 mb-1.5">Subject</label>
+                <input 
+                  type="text" 
+                  id="contact-subject" 
+                  placeholder="Mobile app project, role opportunity, or collaboration" 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/50 transition-all"
+                >
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-mono text-slate-400 mb-1.5">Your Message *</label>
+                <textarea 
+                  id="contact-message" 
+                  rows="4" 
+                  required 
+                  placeholder="Tell me about your project, timeline, or engineering opportunity..." 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/50 transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <button 
+                type="submit" 
+                class="btn-premium w-full flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-bold text-sm shadow-xl shadow-sky-500/20 transition-all"
+              >
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-900 bg-[#05070c] py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      
+      <div class="flex items-center space-x-3">
+        <div class="w-7 h-7 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 font-mono font-bold text-xs">
+          SM
+        </div>
+        <span class="text-xs text-slate-400">
+          Designed & Engineered by <strong class="text-slate-200">Sohaib Mohsin</strong> &copy; 2026
+        </span>
+      </div>
+
+      <div class="flex items-center space-x-6 text-xs text-slate-500 font-mono">
+        <span>60fps Native & Cross-Platform</span>
+        <a href="#hero" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center space-x-1">
+          <span>Back to top</span>
+          <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= PROJECT CASE STUDY MODAL ================= -->
+  <div id="project-modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div id="modal-backdrop" class="absolute inset-0 bg-slate-950/80 backdrop-blur-md"></div>
+    
+    <div class="modal-content relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#0a0f1d] border border-amber-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl z-10">
+      
+      <!-- Close Button -->
+      <button id="close-modal-btn" aria-label="Close modal" class="absolute top-6 right-6 p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Status Pill -->
+      <div class="mb-3">
+        <span id="modal-status" class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-mono border border-amber-500/20"></span>
+      </div>
+
+      <!-- Title & Subtitle -->
+      <h3 id="modal-title" class="text-2xl sm:text-3xl font-bold text-white"></h3>
+      <p id="modal-subtitle" class="text-sm font-mono text-slate-400 mt-1"></p>
+
+      <!-- Tags -->
+      <div id="modal-tags" class="flex flex-wrap gap-2 my-5"></div>
+
+      <!-- Overview Section -->
+      <div class="space-y-6 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-5">
+        <div>
+          <h4 class="text-xs font-mono text-amber-400 uppercase tracking-wider mb-1.5">Project Overview</h4>
+          <p id="modal-description" class="text-slate-300"></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono text-sky-400 uppercase tracking-wider mb-1.5">Architecture & Data Flow</h4>
+          <p id="modal-architecture" class="text-slate-300"></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono text-emerald-400 uppercase tracking-wider mb-2">Key Technical Achievements</h4>
+          <ul id="modal-highlights" class="space-y-2"></ul>
+        </div>
+      </div>
+
+      <!-- Footer Modal Actions -->
+      <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+        <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-premium inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold text-xs">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>View Source on GitHub</span>
+        </a>
+        <button onclick="document.getElementById('project-modal').classList.remove('active'); document.body.style.overflow='';" class="text-xs font-mono text-slate-400 hover:text-white px-3 py-2">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Lucide Icon Initialization -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
